@@ -1,0 +1,49 @@
+/*Bonus Excercise stylecheet*/
+
+
+h2 {
+    border: 2px solid black; 
+    border-radius: 100px 30px 100px 30px;
+    background-color: #b8a9a6;
+    padding: 10px;
+    text-align: center;
+    margin: 2cm 0;
+}
+
+/* Wrapper for all image containers */
+.wrapper {
+    display: flex; /* Aligns all .container divs in a horizontal row */
+    justify-content: center; /* Centers the containers horizontally */
+    gap: 20px; /* Adds spacing between the divs */
+    flex-wrap: wrap; /* Allows wrapping if the screen is small */
+}
+
+/* Individual container for each image & text */
+.container {
+    display: flex;
+    flex-direction: column; /* Stacks image and text */
+    align-items: center; /* Centers content */
+    text-align: center;
+    width: 250px; /* Set a fixed width for each container */
+    padding: 10px;
+    border: 4px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(10, 4, 45, 0.2);
+    background-color: #454545;
+}
+
+/* Image frame adjustments */
+.container img {
+    width: 100%; /* Makes sure all images fit their container */
+    height: 200px; /* Ensures images have a consistent height */
+    object-fit: cover; /* Crops and centers the image */
+    border-radius: 10px;
+}
+
+/* Text style */
+.container p {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+    color: white;
+}

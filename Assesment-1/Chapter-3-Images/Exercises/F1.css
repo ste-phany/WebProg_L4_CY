@@ -1,0 +1,62 @@
+/* Main Stylesheet, includes the base designs. Of my main assessment*/
+
+body {
+  background-color: #e1e1e1;
+  font-family: 'Times New Roman', serif;
+  
+}
+
+h1 {
+  border: 2px solid black; 
+  border-radius: 100px 30px 100px 30px;
+  background-color: #b8a9a6;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px; 
+  text-align: center;
+}
+
+
+/*Seprate edits on each picture*/
+.img1 {
+  background-color: #454545;
+  width: 900% ;
+  max-width: 1200px; 
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(10, 4, 45, 0.2);
+  margin: 20px auto;
+  filter: grayscale(0.5); /*Application of Filters*/
+}
+.img2 {
+  background-color: #454545;
+  width: 900% ;
+  max-width: 1200px; 
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(10, 4, 45, 0.2);
+  margin: 20px auto;
+  filter: hue-rotate(90deg); /*Application of Filters*/
+} 
+.img3 {
+  background-color: #454545;
+  width: 900% ;
+  max-width: 1200px; 
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(10, 4, 45, 0.2);
+  margin: 20px auto;
+  filter: opacity(80%); /*Application of Filters*/
+} 
+
+p {
+  font-size: larger;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}

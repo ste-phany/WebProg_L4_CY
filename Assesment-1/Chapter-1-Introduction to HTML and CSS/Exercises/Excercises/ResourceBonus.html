@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Quick Reference</title>
+    <link rel="stylesheet" href="resource.css"> <!--calling my external css style sheet-->
+</head>
+<body>
+    <header>
+        <h1> HTML & CSS Quick Reference Guide </h1> <!--heading title-->
+        <p> A simple guide to topics we have covered in HTML tags and CSS properties. </p>
+    </header>
+    
+    <section> <!--The <section> element is used to group related content together, making the structure more semantic and easier to navigate.-->
+        <!--HTML Section Guide-->
+        <h2> HTML Tags </h2>
+        <article> <!--I used <article> tag to specify independent, self contained contents-->
+            <h3>&lt;h1&gt; - &lt;h6&gt;: Headers</h3>
+            <p> Headers define different levels of headings. </p>
+            <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;h3&gt;Smaller Heading&lt;/h3&gt;</code></pre>
+        </article>
+
+        <article>
+            <h3>&lt;p&gt;: Paragraph</h3>
+            <p> Used to define paragraphs of text. </p>
+            <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+        </article>
+
+        <article>
+            <h3>&lt;a&gt;: Links</h3>
+            <p> Creates hyperlinks to other pages or sections. </p>
+            <pre><code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+
+            <h3> Absolute Link </h3>
+            <p> link to different websites. </p>
+            <pre><code>&lt;a href="https://ph.pinterest.com/"&gt;Pinterest&lt;/a&gt;</code></pre>
+
+            <h3> Relative Link </h3>
+            <p> Link To Pages in Your Site </p>
+            <pre><code>&lt;a href"index.html"&gt;Home&lt;/a&gt;</code></pre>
+        </article>
+
+        <article>
+            <h3>&lt;img&gt;: Image</h3>
+            <p>Displays an image.</p>
+            <pre><code>&lt;img src="image.jpg" alt="Description"&gt;</code></pre>
+        </article>
+
+        <article>
+            <h3>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;: Lists</h3>
+            <p>Creates unordered and ordered lists.</p>
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;First&lt;/li&gt;
+    &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </article>
+
+        <article>
+            <h3>HTML5 Structural Elements</h3>
+            <p> Three Tags Define an HTML element: start, end, and the contents whithin these tags. </p>
+
+            <h3>1. Header Element</h3>
+            <p> Contains the web page or document's headings. </p>
+            <pre><code>&lt;header&gt;&lt;/header&gt; </code></pre>
+
+            <h3>2. nav Element</h3>
+            <p> Contains the main web page navigations. </p>
+            <pre><code>&lt;nav&gt;&lt;/nav&gt;</code></pre>
+
+            <h3> 3. Main Element</h3>
+            <p> Contains the web page main documents. </p>
+            <pre><code>&lt;main&gt;&lt;/main&gt;</code></pre>
+
+            <h3>4. Footer Element</h3>
+            <p> Contains the web page documents footer. </p>
+            <pre><code>&lt;footer&gt;&lt;/footer&gt;</code></pre>
+        </article>
+
+        <article>
+            <h3>&lt;div&gt;&lt;/div&gt; Element</h3>
+            <p> &lt;div&gt; tag defines a division or a section in an HTML document</p>
+            <pre><code>&lt;div&gt;
+    &lt;p&gt; hello world &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </article>
+
+    </section>
+
+    <!--Css Section Guide-->
+    <section>
+        <h2>CSS Properties</h2>
+        <article>
+            <h3>color</h3>
+            <p>Sets the color of text.</p>
+            <pre><code>p {
+    color: blue;
+}</code></pre>
+        </article>
+
+        <article>
+            <h3>background-color</h3>
+            <p>Sets the background color of an element.</p>
+            <pre><code>body {
+    background-color: lightgray;
+}</code></pre>
+        </article>
+
+        <article>
+            <h3>font-size</h3>
+            <p>Sets the size of the text.</p>
+            <pre><code>h1 {
+    font-size: 24px;
+}</code></pre>
+        </article>
+
+        <article>
+            <h3>margin & padding</h3>
+            <p>Controls the spacing outside and inside elements.</p>
+            <pre><code>div {
+    margin: 10px;
+    padding: 15px;
+}</code></pre>
+        </article>
+
+        <article>
+            <h3>&lt;hr&gt; Horizontal Rule Element</h3>
+            <p> Configures a horizontal line. </p>
+            <pre><code>&lt;p&gt;Hello World&lt;/p&gt;
+&lt;hr&gt;</code></pre>
+            <p><b>Output -</b></p>
+            <p>Hello World</p>
+            <hr>
+        </article>
+
+        <article>
+            <h3>Rounded Corners</h3>
+            <p>Configures the horizontal radius and vertical radius of the corner.</p>
+            <pre><code>h1 {
+    border-radius: 15px;
+}</code></pre>
+        </article>
+
+        <article>
+            <h3>Box-Shadow Property</h3>
+            <p>Configure the horizontal offset, vertical offset, blur radius, and vlaid color value.</p>
+            <pre><code>h1 {
+    font-size: 36px;
+    box-shadow: 5px 5px 5px #828282;
+}</code></pre>
+        </article>
+
+        <article>
+            <h3>Opacity Property</h3>
+            <p>Configure the opacity of an element.</p>
+            <pre><code>h1 {
+    background-color: #FFFFFF;
+    opacity: : 0.3;
+}</code></pre>
+        </article>
+
+        <article>
+            <h3>Gradients</h3>
+            <p>A smooth blending of shades from one color to another.</p>
+            <pre><code>h1 {
+    background-color: #8FA5CE;
+    background-image:  linear-gradient(#FFFFFF, #8FA5CE); 
+}</code></pre>
+        </article>
+
+        <article>
+            <h3>Padding Property Shorthand: Two Values</h3>
+            <p> Each values configures top, bottom padding & left, right padding.</p>
+            <pre><code>h1 {
+    border: 2px solid #ff0000; 
+    background-color: #cccccc;
+    padding: 20px 10px;
+}</code></pre>
+        </article>
+
+        <article>
+            <h3>Padding Property Shorthand: Four Values</h3>
+            <p>Configure top, right, bottom, and left padding.</p>
+            <pre><code>h1 {
+    border: 2px solid #ff0000;
+    width: 250px; 
+    background-color: #cccccc;
+    padding: 30px 10px 5px 20px;
+}</code></pre>
+        </article>
+    </section>
+</body>
+</html>
