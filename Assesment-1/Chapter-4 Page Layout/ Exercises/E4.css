@@ -1,0 +1,129 @@
+/* style.css */
+
+/* Sets default font and resets margin/padding for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000000; /* Default text color */
+}
+
+/* Styles the header section */
+header {
+    background-color: #17072b; /* Dark purple background */
+    color: #ffffff; /* White text */
+    text-align: center; /* Centered text */
+    padding: 20px 0; /* Vertical padding */
+    font-family: Tahoma, sans-serif; /* Font for the heading */
+    font-weight: 700; /* Bold text */
+}
+
+/* Styles the navigation menu (unordered list) */
+nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    margin: 10px 0 0; /* Top margin separates it from the title */
+    display: flex; /* Aligns list items in a row */
+    justify-content: center; /* Centers the nav items */
+    gap: 40px; /* Space between nav items */
+}
+
+/* Optional display property for list items (not necessary with flex) */
+nav ul li {
+    display: inline;
+}
+
+/* Styles the navigation links */
+nav ul li a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Removes underline */
+    font-weight: 700; /* Bold text */
+    font-size: 18px; /* Slightly larger text */
+}
+
+/* Styles the main content area */
+main {
+    display: flex; /* Flexbox layout to place sections side-by-side */
+    justify-content: space-between; /* Space between welcome and line-up */
+    padding: 40px; /* Padding inside the main container */
+    max-width: 1200px; /* Limits the content width */
+    margin: auto; /* Centers the content */
+}
+
+/* Styles the Welcome section */
+.welcome {
+    width: 65%; /* Takes up 65% of main’s width */
+}
+
+/* Styles heading inside Welcome section */
+.welcome h2 {
+    font-weight: 700; /* Bold */
+    text-decoration: underline; /* Underlined */
+    font-size: 24px; /* Size of heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+/* Styles the paragraph in Welcome */
+.welcome p {
+    font-size: 16px;
+    line-height: 1.5; /* Line spacing for readability */
+}
+
+/* Styles image in Welcome section */
+.welcome img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Keep aspect ratio */
+    margin-top: 20px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Styles the Line-up (aside) section */
+.line-up {
+    width: 30%; /* Takes up 30% of main’s width */
+    background-color: #172d67; /* Dark blue background */
+    color: #ffffff; /* White text */
+    padding: 20px; /* Space inside the box */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Styles heading in Line-up section */
+.line-up h2 {
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Styles the list in Line-up */
+.line-up ul {
+    list-style-type: none; /* No bullets */
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.8; /* Space between list items */
+}
+
+/* Container for images in Line-up */
+.line-up .images {
+    display: flex; /* Side-by-side layout */
+    justify-content: space-between; /* Space between the two images */
+    margin-top: 20px;
+}
+
+/* Styles the images in Line-up */
+.line-up .images img {
+    width: 48%; /* Almost half each to fit side-by-side */
+    height: auto;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Styles the footer section */
+footer {
+    background-color: #8c15e9; /* Bright purple */
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Full width */
+}

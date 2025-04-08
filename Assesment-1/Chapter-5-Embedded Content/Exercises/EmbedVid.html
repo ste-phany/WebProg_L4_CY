@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Declares the document as an HTML5 document -->
+<html lang="en">
+<!-- Sets the language of the document to English -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Specifies the character encoding as UTF-8 -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ensures the website is responsive and scales well on mobile devices -->
+
+  <title>Embedded Video</title>
+  <!-- Sets the title shown in the browser tab -->
+
+  <!-- Embedded CSS Styles -->
+  <style>
+    /* Applies box-sizing to all elements for consistent layout */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Styles for the body of the page */
+    body {
+      margin: 0; /* Removes default margin */
+      background-color: #82813d; /* Olive-like background color */
+      display: flex; /* Enables flex layout */
+      flex-direction: column; /* Arranges child elements vertically */
+      min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    }
+
+    /* Header styling */
+    header {
+      background-color: #BAD8B6; /* Light green background */
+      text-align: center; /* Centers the content horizontally */
+      padding: 20px; /* Adds spacing inside the header */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    }
+
+    /* Styles the header text */
+    header h1 {
+      margin: 0; /* Removes default margin */
+      font-size: 2rem; /* Sets font size of the heading */
+    }
+
+    /* Main section where the video is placed */
+    main {
+      flex: 1; /* Takes remaining vertical space */
+      display: flex; /* Flexbox layout */
+      align-items: flex-end; /* Aligns items to the bottom of container */
+      justify-content: center; /* Centers items horizontally */
+      padding-bottom: 30px; /* Space below the video */
+      padding-top: 5%; /* Space above the video */
+    }
+
+    /* Styles the video element */
+    video {
+      width: 100%; /* Takes full width of container */
+      max-width: 500px; /* Limits max width */
+      height: 50%; /* Takes 50% height of the main section */
+      border-radius: 10px; /* Rounds corners */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Adds a deep shadow around the video */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Page header with a title and emojis -->
+  <header>
+    <h1><span>💥</span>Duterte Supporters <span>👊🏻</span></h1>
+  </header>
+
+  <!-- Main content area containing the embedded video -->
+  <main>
+    <video poster="Leadership.jpg" controls loop>
+      <!-- Poster image shown before the video plays -->
+      <!-- Video controls enabled; video loops when it ends -->
+      <source src="EmbedVid/Duterte-Support.mp4" type="video/mp4">
+      <!-- Video source file and type -->
+    </video>
+  </main>
+</body>
+</html>

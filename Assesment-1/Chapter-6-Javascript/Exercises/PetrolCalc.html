@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Petrol Calculator</title>
+
+  <style>
+    /* Base styling for the whole page */
+    /* style.css */
+
+  /* Basic Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Body Styling */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Game Container Styling */
+  .game-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 420px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.8s ease-in;
+  }
+
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Header Styling */
+  h1 {
+    margin-bottom: 1rem;
+    color: #222;
+    font-size: 2rem;
+    position: relative;
+  }
+
+  h1::after {
+    content: '🎨';
+    position: absolute;
+    right: -1.5rem;
+    top: 0;
+    font-size: 1.5rem;
+  }
+
+  /* RGB Display Styling */
+  .rgb-display {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    font-weight: bold;
+    color: #4b0082;
+    border: 2px dashed #4b0082;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: #f3e8ff;
+  }
+
+  /* Info Styling */
+  .info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    color: #333;
+    font-weight: 500;
+  }
+
+  /* Color Option Buttons */
+  .options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .options div {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .options div:hover {
+    transform: rotate(5deg) scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Feedback Message Styling */
+  #message {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2e2e2e;
+    margin-bottom: 1rem;
+    min-height: 1.5rem;
+  }
+
+  /* Replay Button Styling */
+  #replayBtn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  #replayBtn:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+  }
+
+  /* Add some background shapes */
+  body::before,
+  body::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  body::before {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.15);
+    top: 10%;
+    left: -100px;
+  }
+
+  body::after {
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.2);
+    bottom: 15%;
+    right: -70px;
+  }
+
+  </style>
+</head>
+<body>
+
+  <!-- Calculator Container -->
+  <div class="calculator">
+    <h2>Petrol Calculator</h2>
+
+    <!-- Input for petrol cost per liter -->
+    <label for="costPerLiter">Cost per liter ($):</label>
+    <input type="number" id="costPerLiter" value="1.72" step="0.01" min="0">
+
+    <!-- Input for liters purchased -->
+    <label for="litersPurchased">Liters purchased:</label>
+    <input type="number" id="litersPurchased" value="0" step="0.1" min="0">
+
+    <!-- Button to calculate total cost -->
+    <button onclick="calculateTotal()">Calculate Total</button>
+
+    <!-- Output paragraph for total cost -->
+    <p id="totalCost">Total: $0.00</p>
+  </div>
+
+  <script>
+    // Function to calculate the total cost
+    function calculateTotal() {
+      // Get the values from the input fields
+      const costPerLiter = parseFloat(document.getElementById('costPerLiter').value);
+      const liters = parseFloat(document.getElementById('litersPurchased').value);
+
+      // Calculate total cost
+      const total = costPerLiter * liters;
+
+      // Display total with 2 decimal places
+      document.getElementById('totalCost').textContent = `Total: $${total.toFixed(2)}`;
+    }
+  </script>
+
+</body>
+</html>

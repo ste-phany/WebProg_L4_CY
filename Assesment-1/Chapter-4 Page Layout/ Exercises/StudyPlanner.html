@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+<html lang="en">
+<!-- Root of the HTML document with English as the language -->
+<head>
+  <meta charset="UTF-8" />
+  <!-- Character encoding set to UTF-8 for proper text rendering -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Makes the page responsive on different devices -->
+  <title>Study Planner - Web Development</title>
+  <!-- Sets the title shown on the browser tab -->
+  <link rel="stylesheet" href="SP.css" />
+  <!-- Links the external CSS file (SP.css) for styling -->
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Web Development Study Planner</h1>
+    <!-- Main heading of the page -->
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <!-- Unordered list of navigation links -->
+      <li><a href="#">Home</a></li>
+      <!-- Link to Home section -->
+      <li><a href="#planner">Planner</a></li>
+      <!-- Link to the planner section (uses an ID selector) -->
+      <li><a href="#resources">Resources</a></li>
+      <!-- Link to resources section -->
+      <li><a href="#contact">Contact</a></li>
+      <!-- Link to contact section -->
+    </ul>
+  </nav>
+
+  <!-- Main Content Section -->
+  <main>
+    <!-- Left Column: List of tasks -->
+    <section class="column column-left">
+      <h2>Tasks</h2>
+      <!-- Subheading for the task list -->
+      <ul>
+        <!-- List of topics/tasks to study -->
+        <li>HTML & CSS Basics</li>
+        <li>Responsive Design</li>
+        <li>JavaScript Fundamentals</li>
+        <li>APIs & JSON</li>
+        <li>Deploying to the Web</li>
+      </ul>
+    </section>
+
+    <!-- Center Column: Weekly study schedule -->
+    <section class="column column-center">
+      <h2>Weekly Schedule</h2>
+      <!-- Subheading for the schedule section -->
+
+      <article>
+        <!-- Individual week block -->
+        <h3>Week 1</h3>
+        <p>Study HTML & CSS. Complete basic exercises.</p>
+      </article>
+
+      <article>
+        <h3>Week 2</h3>
+        <p>Work on responsive layouts using Flexbox and Grid.</p>
+      </article>
+    </section>
+
+    <!-- Right Column: Notes section -->
+    <section class="column column-right">
+      <h2>Notes</h2>
+      <!-- Subheading for notes section -->
+      <p>Remember to check the course Moodle page for updated resources and deadlines. Practice using semantic HTML tags.</p>
+      <!-- Reminder paragraph -->
+
+      <!-- Example Button to add a note -->
+      <button type="button">Add Note</button>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Creative Computing - Web Development Module</p>
+    <!-- Footer content with copyright -->
+  </footer>
+</body>
+</html>
