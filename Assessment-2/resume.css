@@ -1,0 +1,79 @@
+/* I chose a clean, readable base style for the entire page */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+header.resume {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+header.resume h1 {
+    margin: 0 0 0.5rem;
+}
+header.resume a {
+    margin: 0 0.5rem;
+    color: #a9d6ff;
+    text-decoration: none;
+}
+main.resume-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.title {
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+    margin-bottom: 0.5rem;
+}
+.details {
+    margin-bottom: 1rem;
+}
+.list {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+section {
+    margin-bottom: 2rem;
+}
+.download-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.download-btn:hover {
+    background-color: #1a252f;
+}
+
+.resume {
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.resume a {
+    margin: 0 10px;
+    color: #e0e0ff;
+    text-decoration: none;
+}
+
+.resume a:hover {
+    text-decoration: underline;
+}

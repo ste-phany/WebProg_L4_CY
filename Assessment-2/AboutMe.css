@@ -1,0 +1,218 @@
+/* Importing my custom font 'Stardom-Regular' from my fonts folder */
+/* I want this font to load with a fallback strategy (font-display: swap) for better performance */
+@font-face {
+  font-family: 'Stardom-Regular';
+  src: url('../fonts/Stardom-Regular.woff2') format('woff2'),
+       url('../fonts/Stardom-Regular.woff') format('woff'),
+       url('../fonts/Stardom-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* General Reset */
+/* I reset margin and padding for every element and set box-sizing to border-box for easier sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+/* I set my custom font for the entire page, choose a soft background color, dark text, and good line spacing */
+body {
+  font-family: 'Stardom-Regular', sans-serif;
+  background-color: #D8E9A8;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* Header Section */
+/* I use flexbox to align my header content horizontally, center them, add space between title and photo, and wrap on small screens */
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 40px 20px;
+  background-color:  #FAF6E9;
+  flex-wrap: wrap;
+}
+
+/* Styling for the main page title */
+/* I make the title big and dark for emphasis */
+.about-title {
+  font-size: 3rem;
+  color: #222;
+}
+
+/* Container for my photo */
+/* I prevent the photo from shrinking too much in flex layouts */
+.photo {
+  flex-shrink: 0;
+}
+
+/* My photo styling */
+/* I set a fixed size, make it a circle with border-radius, and add a thick dark green border */
+.my-photo {
+  width: 290px;
+  height: 290px;
+  object-fit: cover; /* This ensures the photo covers the area without distortion */
+  border-radius: 50%;
+  border: 8px solid #083714;
+}
+
+/* Main Content Area */
+/* I limit the width so the content isn't too wide, center it, add padding, white background, rounded corners, and a subtle shadow */
+.about-me-content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Two-column layout for details */
+/* I create a grid with two equal columns and space between them for better readability */
+.details-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+/* Individual section styling */
+/* I add some space below each section for breathing room */
+.section {
+  margin-bottom: 30px;
+}
+
+/* Headings inside sections */
+/* I set a medium font size, dark color, and space below to separate from text */
+.section h2 {
+  font-size: 1.3rem;
+  color: #2a2a2a;
+  margin-bottom: 10px;
+}
+
+/* Paragraph text styling */
+/* I keep the font size readable and align text justified for neat edges */
+.description {
+  font-size: 1rem;
+  color: #000000;
+  text-align: justify;
+}
+
+/* Styling my fun facts list */
+/* I remove default bullets and padding for a cleaner look */
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Individual list items */
+/* I add spacing below each item and indent text for a neat appearance */
+.list li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Custom bullet points */
+/* I add a bold, dark bullet using the ::before pseudo-element to style the list distinctively */
+.list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #071a09;
+  font-weight: bold;
+}
+
+/* Styling links inside my lists */
+/* I use a calm blue color and remove underlines for a neat look */
+.list a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+/* Link hover effect */
+/* I underline the link on hover to indicate it's clickable */
+.list a:hover {
+  text-decoration: underline;
+}
+
+/* Home Button Styling */
+/* I center the button horizontally with auto margins, add spacing above and below, and style it with green background and rounded corners */
+.home-button {
+  display: block;
+  margin: 40px auto 20px auto; /* top, left/right, bottom spacing */
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: rgb(26, 52, 33);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Home button hover effect */
+/* I brighten the green background when someone hovers over the button to provide feedback */
+.home-button:hover {
+  background-color: rgba(54, 129, 52, 0.8);
+}
+
+/* Footer Section Styling */
+/* I add padding and a dark background to visually separate the footer */
+.footer-section {
+    padding: 30px 0;
+    background: #191A19;
+}
+
+/* Content inside footer */
+/* I center all footer content both vertically and horizontally for a clean look */
+.footer-section .section-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
+    text-align: center; 
+}
+
+/* Footer text colors */
+/* I make sure all footer text and links appear white for contrast */
+.footer-section :where(.copyright-text, .social-link, .policy-link) {
+    color: white;
+}
+
+/* Footer policy link hover */
+/* I change the link color on hover to a soft green for subtle interaction */
+.footer-section .policy-text .policy-link:hover {
+    color: #A0C878;
+}
+
+/* Responsive Layout for smaller screens */
+/* When the screen is less than 900px wide, I adjust layout to one column and resize elements for better mobile viewing */
+@media (max-width: 900px) {
+  .details-section {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .my-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,764 @@
+/*Importing Embedded fonts from Web: https://fontshare.com/*/
+@font-face {
+    font-family: 'Sentient-Regular';
+    src: url('fonts/Sentient-Regular.woff2') format('woff2'),
+         url('fonts/Sentient-Regular.woff') format('woff'),
+         url('fonts/Sentient-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Telma-Regular';
+    src: url('fonts/Telma-Regular.woff2') format('woff2'),
+         url('fonts/Telma-Regular.woff') format('woff'),
+         url('fonts/Telma-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Telma-Medium';
+    src: url('../fonts/Telma-Medium.woff2') format('woff2'),
+         url('../fonts/Telma-Medium.woff') format('woff'),
+         url('../fonts/Telma-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stardom-Regular';
+  src: url('../fonts/Stardom-Regular.woff2') format('woff2'),
+       url('../fonts/Stardom-Regular.woff') format('woff'),
+       url('../fonts/Stardom-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* I reset margin and padding for all elements to zero and set box-sizing to border-box so padding and borders are included in the element's total width and height */
+/* I also set my default font to 'Sentient-Regular', falling back to sans-serif */
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Sentient-Regular', sans-serif;
+}
+
+/* I use the :root selector to define CSS variables so I can easily reuse colors, font sizes, weights, border radii, and layout widths consistently across my site */
+:root {
+     /* Colors I use throughout the site for consistent design */
+    --white-color: #A0C878; 
+    --dark-color: #191A19;
+    --primary-color: #FAF6E9;
+    --secondary-color: #7d884b;
+    --light-green-color: #D8E9A8;
+    --meduim-greys-color: #D1D4C9; 
+
+    /* Font sizes for easy typography control */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-1: 1.5rem;
+    --font-size-x1: 2rem;
+    --font-size-xx1: 2.3rem;
+
+    /* Font weights for text emphasis */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+     /* Border radius sizes for rounded corners */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 100%;
+
+    /* Max width for my site container for consistent layout */
+    --site-max-width: 1300px;
+}
+
+/* I enable smooth scrolling behavior when navigating within the page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styling for the whole site */
+/* I remove bullet points from all unordered lists for a cleaner look */
+ul {
+    list-style: none;
+}
+
+/* I remove underlines from all anchor tags for a minimal style */
+a {
+    text-decoration: none;
+}
+
+/* I style all buttons to have no border or background by default and to show a pointer cursor on hover */
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* I make all images responsive by setting their width to 100% of their container */
+img {
+    width: 100%;
+}
+
+/* Section content container */
+/* I center content horizontally, add side padding for breathing room, and limit maximum width to my site's max width */
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+}
+
+/* Decorative line below section titles */
+/* I add a short horizontal bar below each section title, centered with rounded edges and using my secondary color for style */
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-x1);
+}
+
+/* Section titles */
+/* I center the text, add generous padding above and below, uppercase the text, and set a large font size */
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+}
+
+/* Navigation Styling */
+/* I fix the header at the top so it stays visible when I scroll. It spans the full width and sits above other content with a high z-index. I give it my primary background color */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: var(--primary-color);
+}
+
+/* Inside my header, the navbar is a flex container so I can easily align items horizontally with space between */
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;     /* I vertically center the navbar items */
+    justify-content: space-between;     /* I put space between the logo and menu */
+}
+
+/* My logo text uses a custom font and color for branding, sized large and semi-bold for emphasis */
+.navbar .nav-logo .logo-text {
+    color: var(--white-color);
+    font-family: 'Telma-Regular', sans-serif;
+    font-size: var(--font-size-x1);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* The navigation menu is also a flex container with a small gap between each link for spacing */
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+
+/* Each navigation link has padding to make them easier to click and read, with my white color and medium font size */
+/* I round the corners of each link and add a smooth transition for hover effects */
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    color: var(--white-color);
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+}
+
+/* On hover, I invert the colors so the link background uses my secondary color and the text changes to my primary color for clear feedback */
+.navbar .nav-menu .nav-link:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+/* I hide the menu open and close buttons by default — maybe these are for a responsive menu that shows up only on smaller screens */
+.navbar :where(#menu-close-button, #menu-open-button){
+    display: none;
+}
+
+/*picture-section Styling*/
+/* I give my image a bit of padding at the bottom and make it perfectly round with a 50% border radius */
+.my-image {
+    padding-bottom: 5px;
+    border-radius: 50%;
+}
+
+/* My picture section takes up at least the full height of the viewport, and I set its background to my primary color */
+.picture-section {
+    min-height: 100vh;
+    background: var(--primary-color);
+}
+
+/* Inside the picture section, I use flexbox to align content horizontally, center them vertically, and space them out */
+/* I also set a minimum height taller than the viewport to give it plenty of space, and make the text white for contrast */
+.picture-section .section-content {
+    display: flex;
+    align-items: center;
+    min-height: 130vh;
+    color: var(--white-color);
+    justify-content: space-between;
+}
+
+/* For the title in her-details, I make the font big and use my secondary color and a custom font for a nice style */
+.picture-section .her-details .title {
+    font-size: 50px;
+    color: var(--secondary-color);
+    font-family: 'Telma-Medium', sans-serif;
+}
+
+/* The subtitle has some top margin to separate it from the title, a max width for readability, justified text, bigger font size, and medium-bold weight */
+.picture-section .her-details .subtitle {
+    margin-top: 8px;
+    max-width: 80%;
+    text-align: justify;
+    font-size: 30px;
+    font-weight: var(--font-weight-semibold);
+}
+
+/* The description gets a smaller font, a max width, vertical margin to space it from other elements, and justified alignment for neat text blocks */
+.picture-section .her-details .description {
+    max-width: 70%;
+    margin: 24px 0 40px;
+    text-align: justify;
+    font-size: var(--font-size-m);
+}
+
+/* I contain my image within a wrapper that limits its max width to 500px and adds some right margin to separate it from text */
+.picture-section .my-image-wrapper {
+    max-width: 500px;
+    margin-right: 30px;
+}
+
+/*About Section Styling*/
+/* I give my about section plenty of vertical padding and set a light green background for a fresh look */
+.about-section {
+    padding: 120px 0;
+    background: var(--light-green-color);
+}
+
+/* Inside the about section, I use flexbox to arrange content side by side with space between and centered alignment */
+.about-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* For my about image, I fix the width and height to 400px each, cover the container fully without distortion, and make it perfectly round */
+.about-section .about-image-wrapper .about-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+
+/* I style the section title inside about details with a larger font size and some padding for spacing */
+.about-section .about-details .section-title {
+    font-size: 2rem;
+    padding: 1;
+}
+
+/* I limit the about details content to half the container width so it doesn’t get too wide */
+.about-section .about-details {
+    max-width: 50%;
+}
+
+/* For the main about text, I set comfortable line spacing and vertical margins */
+/* I also try to justify the text but center it horizontally (though the combination is a bit unusual) */
+/* I use a medium font size for readability */
+.about-section .about-details .text {
+    line-height: 35px;
+    margin: 50px 0 30px;
+    text-align: center justify;
+    font-size: var(--font-size-m);
+}
+
+/* The "learn more" link I display as a block and center it with some margin above for spacing */
+.about-section .learn-more a {
+    display: block;
+    text-align: center;
+    margin-top: 10px; 
+}
+
+/* My social links are spaced out horizontally with a generous padding on top and centered in the section */
+.about-section .social-link-list {
+    padding-top: 1in;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Each social link uses my primary color and medium font size, with a smooth color transition effect on hover */
+.about-section .social-link-list .social-link {
+    color: var(--primary-color);
+    font-size: var(--font-size-1);
+    transition: 0.2s ease;
+}
+
+/* When I hover over social links, they change to my secondary color for a nice interactive effect */
+.about-section .social-link-list .social-link:hover {
+    color: var(--secondary-color);
+}
+
+/*Education Section Stying*/
+/* This entire block is for my Education section on the page */
+.education-section {
+    margin: 0;
+    padding: 1cm 0 120px 0;
+    background: var(--primary-color);
+}
+
+/* Title styling inside the education section */
+.education-section .education-title {
+    text-align: center;
+    padding-left: 1cm;
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+    font-size: 3.3rem;
+    color: var(--secondary-color);
+    font-family: 'Telma-Medium', sans-serif; /* This font comes from the linked costom font above👆🏼 */
+    margin-bottom: 40px;
+}
+
+/* This section wraps all my education cards */
+.education-section-content {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Each column card for an education item */
+.edu-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Styling the image inside the education column */
+.edu-column img {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.5s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the image */
+.edu-column img:hover {
+    box-shadow: 0 10px 21px rgba(117, 214, 177, 0.398); /* I added a subtle green shadow to highlight it */
+    transform: scale(1.05); /* Slight zoom effect to make it interactive */
+}
+
+/* Text description below each education image */
+.edu-column p {
+    color: var(--secondary-color);
+    font-family: 'Sentient-Regular', sans-serif; /* This font comes from the linked costom font above👆🏼 */
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/*Skills & Hobbies Section*/
+/* This section shows off both my technical skills and personal hobbies */  
+.skill_hobbies {
+    padding: 50px 0 100px;
+    background: var(--light-green-color);
+}
+
+/* Wrapper for the slider that contains the hobbies or skill cards */
+.skill_hobbies .slider-wrapper {
+   overflow: hidden;
+   margin: 0 60px 50px; 
+}
+
+/* Main title for the section */
+.skill_hobbies .title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: 'Telma-Medium',sans-serif; /* This font comes from the linked costom font above👆🏼 */
+}
+
+/* Decorative line under the title */
+.skill_hobbies .title::after {
+    content: "";
+    width: 250px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+}
+
+
+/* Wrapper around all images in the slider */
+.skill_hobbies .images {
+    display: flex;
+    padding: 35px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Individual hobby or skill image */
+.skill_hobbies .images .Hobbies {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    border-radius: var(--border-radius-circle);
+}
+
+/* Name of the skill or hobby */
+.skill_hobbies .images .name {
+    margin-bottom: 16px;
+    font-size: var(--font-size-m);
+}
+
+/* Description or additional info about the hobby */
+.skill_hobbies .images .info {
+    line-height: 25px;
+    padding-bottom: 1cm;
+}
+
+/* Styling for the pagination bullets in the swiper */
+.skill_hobbies .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    background: var(--secondary-color);
+}
+
+/* Style for the swiper navigation buttons */
+.skill_hobbies .swiper-slide-button {
+    color: var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+/* Hover effect on navigation buttons */
+.skill_hobbies .images .swiper-slide-button:hover {
+    color: var(--primary-color);
+}
+
+/* learn more button to open my gallery website */
+.skill_hobbies .learn-more {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    padding: 20px 0;
+}
+
+.skill_hobbies .learn-more button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: rgb(26, 52, 33);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.skill_hobbies .learn-more button:hover {
+    background-color: rgba(54, 129, 52, 0.8);
+}
+
+/*Get In Touch Styling*/
+.contact-section {
+    padding: 50px 0 100px;
+    background: var(--primary-color);
+}
+
+.contact-section .section-title {
+    /* This is the title of the contact section — I wanted it bold and unique */
+    font-size: 3rem;
+    font-family: 'Stardom-Regular', sans-serif; /* This font comes from the linked costom font above👆🏼 */
+}
+
+/* I created a decorative underline using ::after for visual separation */
+.contact-section .section-title::after {
+    content: "";
+    width: 200px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+}
+
+/* I used flex to arrange the contact info and form side by side, spaced evenly */
+.contact-section .section-content {
+    display: flex;
+    gap: 45px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    justify-content: space-between;
+}
+
+
+.contact-section .contact-info-list .contact-info a.social-link {
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+/* Each contact detail (like email or phone) is styled here */
+.contact-section .contact-info-list .contact-info {
+    font-size: 1.2rem;
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    align-items: center;
+}
+
+/* Icons in the contact list (like envelope, phone) are given standard sizing */
+.contact-section .contact-info-list .contact-info i {
+    font-size: var(--font-size-m);
+}
+
+/* This styles my input and textarea fields */
+.contact-section .contact-form .form-input {
+    width: 100%;
+    height: 50%;
+    padding: 10px 12px 10px;
+    outline: none;
+    margin-bottom: 16px;
+    background-color: var(--light-green-color);
+    border-radius: var(--border-radius-s);
+    border: 3px solid var(--primary-color);
+}
+
+ /* I made sure the form can expand fully in its container */
+.contact-section .contact-form {
+    max-width: 100%;
+}
+
+ /* I added a dashed border when a user focuses on the field, for better accessibility */
+.contact-section .contact-form .form-input:focus {
+    border-style: dashed;
+    border-color: #177717;
+}
+
+ /* Special styling for the message textarea */
+.contact-section .contact-form textarea.form-input {
+    height: 100px;
+    padding: 12px;
+    resize: vertical; /* Allows users to adjust height if needed */
+}
+
+ /* This is the send/submit button style */
+.contact-section .contact-form .submit-button {
+    padding: 10px 26px;
+    margin-top: 10px;
+    color: white;
+    font-family: 'Sentient-Regular', sans-serif; /* This font comes from the linked costom font above👆🏼 */
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-medium);
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-m);
+    border: 2px solid var(--secondary-color);
+    transition: 0.3 ease;
+}
+
+/* On hover, I reversed the colors for a clean interactive feel */
+.contact-section .contact-form .submit-button:hover {
+    color: var(--dark-color);
+    background: transparent;
+}
+
+
+/*Footer Section Styling*/
+ /* I added vertical padding and set the background to my dark theme color */
+.footer-section {
+    padding: 30px 0;
+    background: var(--dark-color);
+}
+
+/* I centered all footer content both horizontally and vertically */
+.footer-section .section-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
+    text-align: center; 
+}
+
+/* I used :where() to apply white text color to multiple elements at once */
+.footer-section :where(.copyright-text, .social-link, .policy-link) {
+    color: white;
+}
+
+ /* When someone hovers over policy links (like Privacy Policy or Terms), it gets a nice green tint */
+.footer-section .policy-text .policy-link:hover {
+    color: #A0C878;
+}
+
+/*Responsive Media query code*/
+@media screen and (max-width: 900px) {
+
+     /* I adjusted font sizes to be smaller on smaller screens */
+    :root {
+        --font-size-m: 1rem;
+        --font-size-1: 1.3rem;
+        --font-size-x1: 1.5rem;
+        --font-size-xx1: 1.8rem;
+    }
+
+    /* When the mobile menu is shown, I added a dark blur overlay behind it */
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgb(0, 0, 0, 0.2);
+    }
+
+    /* I made both the menu open and close buttons visible on smaller screens */
+    .navbar :where(#menu-close-button, #menu-open-button) {
+        display: block;
+        font-size: var(--font-size-1);
+    }
+
+    /* I positioned the close (X) button at the top-right corner inside the menu */
+    .navbar #menu-close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    /* I made the hamburger menu button white for better contrast */
+    .navbar #menu-open-button {
+        color: var(--white-color);
+    }
+
+    /* I styled the mobile side menu layout */
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--white-color);
+        transition: left 0.2s ease;
+    }
+
+    /* When the menu is opened, I slide it in from the left */
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    /* I styled the individual navigation links inside the mobile menu */
+    .navbar .nav-menu .nav-link {
+        color: var(--dark-color);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-1);
+    }
+
+    /* Picture section responsiveness: I stacked image and text vertically */
+    .picture-section .section-content {
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    /* I made sure subtitles and descriptions don’t overflow on small screens */
+    .picture-section .her-details :is(.subtitle, description) {
+        max-width: 100%;
+    }
+
+
+    /* I centered the buttons under the text in the hero section */
+    .picture-section .her-details .buttons {
+        justify-content: center;
+    }
+
+    /* I limited the image width and removed the right margin */
+    .picture-section .my-image-wrapper {
+        padding-top: 50px;
+        max-width: 270px;
+        margin-right: 0;
+    }
+
+    /* About section stacks image and text vertically with spacing */
+    .about-section .section-content {
+        gap: 70px;
+        flex-direction: column;
+    }
+
+    /* I resized the about image to scale better on mobile */
+    .about-section .about-image-wrapper .about-image {
+        width: 100%;
+        height: 100%;
+        max-height: 250px;
+        aspect-ratio: 1;
+    }
+
+     /* I centered the title in the education section */
+    .education-section .education-title {
+        padding-left: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* I stacked education cards vertically and centered them */
+    .education-section .education-section-content {
+        gap: 100px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* I stacked the contact form and contact info in reverse order */
+    .contact-section .section-content {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    /* I removed the side margins of the slider to use full screen width on smaller devices */
+    .skill_hobbies .slider-wrapper {
+        margin: 0 0 30px;
+    }
+
+     /* I hid the Swiper navigation arrows on very small screens to avoid clutter */
+    .skill_hobbies .swiper-slide-button {
+        display: none;
+    }
+}

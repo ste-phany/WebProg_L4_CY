@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephanie's | Personal Porfolio</title>
+    <!--Linking Fonts Awesome For Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!--Linking Swiper Css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="portfolio.css"> 
+</head>
+<body>
+    <!--Header | Navbar-->
+    <header>
+         <!-- Main navigation bar that holds my site logo and menu links -->
+        <nav class="navbar section-content">
+            <!-- My clickable logo/name at the top left that links to the homepage -->
+            <a href="#"class= "nav-logo">
+                <h2 class="logo-text">Stephanie</h2>
+            </a>
+             <!-- The main navigation menu with all the page sections and external links -->
+            <ul class="nav-menu">
+                <!-- Button to close the mobile menu (visible on small screens) -->
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+                 <!-- Navigation links for each section of my portfolio,
+                 when clicked it direct to the section where it was placed or redirect to a different website.-->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About Me</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="#education&academics" class="nav-link">Education & Academics</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills&hobbies" class="nav-link">Skills & Hobbies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Resume.html" class="nav-link">CV/Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#getintouch" class="nav-link">Get In Touch</a>
+                </li>
+            </ul> 
+
+            <!-- Button to open the mobile menu (hamburger icon) -->
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main>
+        <!--Profile Section-->
+        <section class="picture-section">
+            <!-- This wrapper helps align my text and picture side-by-side -->
+            <div class="section-content">
+                <!-- Left side: My self-written poem and a personal message to visitors -->
+                <div class="her-details">
+                    <h2 class="title">My Profile</h2>
+                     <!-- My personal poem that reflects who I am and how I lead my life -->
+                    <h3 class="subtitle">I’m a purpose-led mind with a vision so wide,
+                    In cybersecurity, I boldly reside.
+                    With faith as my guide and growth in my lane,
+                    I lead with heart, not chasing fame.
+                    From skill to wealth, I build with grace—
+                    Leaving a mark in every space.</h3>
+                     <!-- A warm paragraph to welcome visitors and give context to my page -->
+                    <p class="description">I’m so glad you’re here. This space is a reflection of my journey, passions, and purpose—where cybersecurity meets creativity, 
+                        and ambition walks hand in hand with faith. Feel free to explore, learn more about my work, and join me as I grow, build, and make an impact. </p>
+                    
+                    <!-- Button that leads to my contact section, encouraging people to reach out -->
+                    <div class="buttons">
+                        <a href="#getintouch" class="button-contact">Contact Me</a>
+                    </div>
+                </div>
+                <!-- Right side: My personal image to make the intro section visually warm and relatable -->
+                <div class="my-image-wrapper">
+                    <img src="Pictures/home.jpg" alt="tephy" class="my-image">
+                </div>
+            </div>
+        </section>
+
+        <!--About Section-->
+        <section class="about-section" id="about">
+            <!-- I use this container to hold both my picture and the description side by side -->
+            <div class="section-content">
+                 <!-- Left side: My personal image that gives a visual intro to me -->
+                <div class="about-image-wrapper">
+                    <img src="Pictures/Computer_Pic.jpg" alt="About" class="about-image">
+                </div>
+                <!-- Right side: This is where I tell my story -->
+                <div class="about-details">
+                    <h2 class="section-title">About Me</h2>
+                    <!-- My personal introduction, goals, and values in paragraph form -->
+                    <p class="txt">I'm Stephanie — a driven and purpose-led Cybersecurity student with a passion for technology, growth, and meaningful impact. 
+                        Currently pursuing my degree in Cybersecurity, I am committed to building a career that blends technical expertise with emotional intelligence and strategic thinking.
+                        Beyond academics, I thrive on creativity, intentional living, and staying aligned with my values. 
+                        I envision a future marked by global experiences, financial wisdom, strong health, and a legacy of excellence. 
+                        Whether I’m securing digital systems, crafting content, or leading with heart, I’m always moving forward — with vision, discipline, and grace.</p>
+                        <!-- Optional link for visitors who want to read more about me -->
+                        <p class="learn-more">
+                            <a href="AboutMe.html">Learn More</a>
+                        </p>
+                         <!-- My social media links so people can connect with me outside the portfolio -->
+                        <div class="social-link-list">
+                            <a href="https://www.facebook.com/stephanie.alcorin" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/wlddmer_tephy/" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/tep-phy-4b1829317/" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://x.com/Miffintickle" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Education Section-->
+        <section class="education-section" id="education&academics">
+            <h2 class="education-title">My Education & Academics</h2>
+            <!-- This container wraps everything inside the education section -->
+            <div class="education-section-content">
+                <div class="edu-column wmaa-image-details">
+                    <!-- I made the school image clickable and linked it to WMAA's official Facebook page -->
+                    <a href="https://www.facebook.com/wmaa.official/">
+                        <img src="Pictures/WMAA.jpeg" alt="Western Mindanao Adventist Academy" class="wmaa-image">
+                    </a>
+                     <!-- A short description about what I accomplished in high school -->
+                    <p class="text">Finished my Highschool in Academic Excellence, and have volunteered to FOC Ministry & Media Team during my years.</p>
+                </div>
+                 <!-- Second column: My current education path -->
+                <div class="edu-column ftc-image-details">
+                    <img src="Pictures/FTSC.png" alt="Future Training Center" class="ftsc-image">
+                    <!-- Description about what I'm currently studying, with a link to FTC’s official website -->
+                    <p>Currently studying in <a href="https://ftcglobalauh.ae//">Future Training Center<a> in a course of Cybersecurity level 4.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Skills & Hobbies Section-->
+        <section class="skill_hobbies" id="skills&hobbies">
+            <h2 class="title">Skills & Hobbies</h2>
+            <!-- Wrapper for the whole content inside this section -->
+            <div class="skill_hobbies_section_content">
+                 <!-- This is the main slider container where all the items will slide left/right -->
+                <div class="slider_container swiper">
+                    <!-- The wrapper that holds all the individual slides -->
+                    <div class="slider_wrapper">
+                        <!-- The list of hobbies/skills, each one is a separate slide -->
+                        <ul class="skills-hobbies swiper-wrapper">
+                            <!-- Bible Study hobby -->
+                            <li class="images swiper-slide">
+                                <img src="Pictures/Bible_study.jpg" alt="Bible Study" class="Hobbies">
+                                <h3 class="name">Bible Study</h3>
+                                <i class="info">Studying the Bible helps me stay grounded in faith and grow spiritually. 
+                                    It gives me wisdom, peace, and direction in everyday life.</i>
+                            </li>
+                             <!-- Cybersecurity skill -->
+                            <li class="images swiper-slide">
+                                <img src="Pictures/coding.jpg" alt="Cybersecurity" class="Hobbies">
+                                <h3 class="name">Cybersecurity</h3>
+                                <i class="info">I’m passionate about cybersecurity because I enjoy protecting digital spaces and solving complex problems. 
+                                    It’s a field that constantly challenges me to think critically and stay ahead of threats.</i>
+                            </li>
+                             <!-- Swimming hobby -->
+                            <li class="images swiper-slide">
+                                <img src="Pictures/Swimming.jpg" alt="Swimming" class="Hobbies">
+                                <h3 class="name">Swimming</h3>
+                                <i class="info">Swimming is one of my favorite ways to stay active and clear my mind. 
+                                    It keeps me physically strong, focused, and refreshed.</i>
+                            </li>
+                             <!-- Running hobby -->
+                            <li class="images swiper-slide">
+                                <img src="Pictures/Jogging.jpg" alt="Running" class="Hobbies">
+                                <h3 class="name">Running</h3>
+                                <i class="info">Running energizes me and clears my thoughts. 
+                                    It builds my endurance, discipline, and love for movement.</i>
+                            </li>
+                        </ul>
+                        
+                        <!-- This adds pagination dots to show which slide we're on -->
+                        <div class="swiper-pagination"></div>
+                         <!-- These two are for navigating between the slides -->
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                        <div class="swiper-slide-button swiper-button-next"></div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <p class="learn-more">
+                    <button onclick="window.location.href='Gallery.html'">Learn More</button>
+                </p>
+            </div>
+        </section>
+
+
+        <!--Get In Touch Section-->
+        <section class="contact-section" id="getintouch">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-content">
+                <!--Contact Information List, and it is also clickable-->
+                <ul class="contact-info-list">
+                    <li class="contact-info">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>stephy.alcorin@gmail.com</span>
+                    </li>
+                    <li class="contact-info">
+                        <a class="social-link"><i class="fa-solid fa-phone"></i>
+                        <p>(+972) 52 241 8230</p>
+                    </li>
+                    <li class="contact-info">
+                        <a href="https://www.facebook.com/stephanie.alcorin" class="social-link">
+                        <i class="fa-brands fa-facebook"></i>
+                        <p>Ste Phanie</p>
+                    </li>
+                    <li class="contact-info">
+                        <a href="https://www.instagram.com/wlddmer_tephy/" class="social-link">
+                        <i class="fa-brands fa-instagram"></i>
+                        <p>wlddmer_tephy</p>
+                    </li>
+                    <li class="contact-info">
+                        <a href="https://www.linkedin.com/in/tep-phy-4b1829317/" class="social-link">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <p>Te phy</p>
+                    </li>
+                     <li class="contact-info">
+                        <a href="https://x.com/Miffintickle" class="social-link">
+                        <i class="fa-brands fa-x-twitter"></i></a>
+                        <p>@Miffintickle</p>
+                    </li>
+                </ul>
+                
+                <!-- This is the contact form users will fill out -->
+                <!-- For now, I'm using JavaScript to simulate a submission and redirect -->
+               <form onsubmit="handleSubmit(event)" class="contact-form">
+                     <!-- I'm asking for their name -->
+                    <input type="text" name="name" placeholder="Your Name" class="form-input" required>
+                    <!-- And their email address -->
+                    <input type="email" name="email" placeholder="Your Email" class="form-input" required>
+                     <!-- And their message to me -->
+                    <textarea name="message" placeholder="Your Message" class="form-input" required></textarea>
+
+                    <!-- This is the button they'll press to submit the form -->
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+
+                <!-- I wrote a little JavaScript to make the button redirect to my thank you page -->
+                <!-- This lets me test the redirect without needing a real backend -->
+                <script>
+                function handleSubmit(event) {
+                    event.preventDefault(); // Stop the actual form from actually submitting
+                    window.location.href = 'Thankyou.html'; // Then I redirect to my thank you page
+                }
+                </script>
+            </div>
+        </section>
+
+        <!--Footer Section-->
+        <footer class="footer-section">
+            <div class="section-content">
+                <p class="copyright-text">© 2025 Stephanie Personal Portfolio.Last Modified: May 2025</p>
+                <p class="policy-text">
+                    <a href="https://dda.gov.ae/en/website-policy" class="policy-link">Privacy Policy</a>
+                </p>
+            </div>
+        </footer>
+    </main>
+
+    <!--linking Swiper Script-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--Linking Cutom Script-->
+    <script src="script.js"></script>
+</body>
+</html>

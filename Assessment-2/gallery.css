@@ -1,0 +1,149 @@
+/*Custom font import*/
+@font-face {
+  font-family: 'Stardom-Regular';
+  src: url('../fonts/Stardom-Regular.woff2') format('woff2'),
+       url('../fonts/Stardom-Regular.woff') format('woff'),
+       url('../fonts/Stardom-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+/*general reset & box sizing*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Enables smooth scrolling behavior for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/*Body Styling*/ 
+body {
+    font-family: 'Stardom-Regular', sans-serif;
+    background-color: #78cab6;
+    color: #000000;
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+/* Main heading inside header */
+header {
+    background-color: #224343;
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+/*Navigation Styling*/
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #1c5f68;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #1c5f68;
+}
+
+/*Gallery styling*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/*inside the card styling*/
+.card img {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover; 
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/*Footer Section Styling*/
+ /* I added vertical padding and set the background to my dark theme color */
+.footer-section {
+    padding: 30px 20px 20px 20px;
+    background: #224343;
+    border-radius: 10px;
+}
+
+/* I centered all footer content both horizontally and vertically */
+.footer-section .section-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
+    text-align: center; 
+}
+
+/* I used :where() to apply white text color to multiple elements at once */
+.footer-section :where(.copyright-text, .social-link, .policy-link) {
+    color: white;
+}
+
+ /* When someone hovers over policy links (like Privacy Policy or Terms), it gets a nice green tint */
+.footer-section .policy-text .policy-link:hover {
+    color: #A0C878;
+}
+
+/*Responsive adjustments for mobile devices*/
+@media (max-width: 600px) {
+     /* Smaller heading size */
+    h1 {
+    font-size: 1.5rem;
+    }
+
+    /* Smaller nav buttons on small screens */
+    nav a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    }
+}

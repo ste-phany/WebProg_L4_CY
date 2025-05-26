@@ -1,0 +1,56 @@
+body {
+    /* I remove the default margin and padding so my page uses the full window */
+    margin: 0;
+    padding: 0;
+    /* I set a full background image for the page */
+    background-image: url('Pictures/Thank_You.jpg');
+    /* I make sure the background covers the entire page without stretching */
+    background-size: cover;
+    /* I center the background image nicely */
+    background-position: center;
+    /* I set the height to the full viewport height so the background fits perfectly */
+    height: 100vh;
+    /* I use flexbox to center my content both vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* I set the text color to white so it stands out on the background */
+    color: white;
+    /* I choose Arial as my font for a clean and professional look */
+    font-family: Arial, sans-serif;
+    /* I add a subtle shadow behind the text to improve readability against the background */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.home-button {
+    /* I position my button absolutely so I can place it at the bottom center */
+    position: absolute;
+    /* I move it 40px from the bottom of the page */
+    bottom: 40px;
+    /* I center it horizontally by setting left to 50% */
+    left: 50%;
+    /* I use translateX to perfectly center the button by moving it back half its width */
+    transform: translateX(-50%);
+    /* I add padding to make the button bigger and easier to click */
+    padding: 12px 24px;
+    /* I set a readable font size */
+    font-size: 1rem;
+    /* I use a semi-transparent green background that fits the theme */
+    background-color: rgba(31, 74, 43, 0.6);
+    /* I keep the text color white for contrast */
+    color: white;
+    /* I remove the border for a clean button look */
+    border: none;
+    /* I round the corners a bit to make it look modern and friendly */
+    border-radius: 8px;
+    /* I change the cursor to pointer to show it’s clickable */
+    cursor: pointer;
+    /* I add a smooth transition effect when the background color changes */
+    transition: background-color 0.3s;
+}
+
+.home-button:hover {
+    /* When I hover over the button, I darken the background to give feedback */
+    background-color: rgba(54, 129, 52, 0.8);
+}
